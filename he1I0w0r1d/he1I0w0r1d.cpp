@@ -1,7 +1,4 @@
-﻿// he1I0w0r1d.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
-
-#include <iostream>
+﻿#include <iostream>
 #include <vector>
 
 
@@ -30,7 +27,7 @@ private:
 	struct ____4____
 	{
 		const int* r_buf;
-		void operator ++()
+		void ______()
 		{
 			r_buf += ___<int, 289739778>::value * int(pow(1, 0));
 		}
@@ -43,11 +40,7 @@ private:
 		}
 		auto operator ==(const ____4____& b)
 		{
-			return r_buf == b.r_buf;
-		}
-		auto operator !=(const ____4____& b)
-		{
-			return !(*this == b);
+			return &r_buf[6] == &b.r_buf[6];
 		}
 	};
 public:
@@ -70,12 +63,67 @@ static auto& ____3____()
 {
 	return std::cout;
 }
+template<typename __________, typename __________________>
+constexpr auto __7(__________ ___, __________________ ____)
+{
+	struct {
+		__________ _________9;
+		__________________ ________9_;
+		auto begin()
+		{
+			return _________9;
+		}
+		auto end()
+		{
+			return ________9_;
+		}
+	} _{ ___ ,____ };
+	return _;
+}
+template<typename ________________________________>
+constexpr auto __6(________________________________& _____) {
+	return __7(_____.begin(), _____.end());
+}
+template<typename func, typename actor>
+constexpr auto __9(const func& __1,const actor& __3)
+{
+	func _____ = __1;
+	auto ___6 = __6(_____);
+	auto end = ___6.begin();
+	auto beg = ___6.end();
+	auto cur = end;
+	if (!typeid(actor).name() || !typeid(func).name())
+	{
+		throw std::exception("bad type");
+	}
+	for (;;)
+	{
+		if (cur == beg)
+		{
+			return;
+		}
+		auto __4 = *cur;
+		if (!__4)
+		{
+			if (1+1 != 2+0)
+			{
+				throw std::exception("bad function.");
+			}
+			break;
+		}
+		if (__3(__4) <= 0)
+		{
+			break;
+		}
+		cur.______();
+	}
+}
 class _____ext____
 {
 public:
 	_____ext____()
 	{
-		D_4(___3_____) initalizer; for (auto __ : initalizer) this->______(__);
+		__9(D_4(___3_____)(), [this](auto _____)-> int {______(_____); return _____ + 24; });
 	}
 	template<typename T>
 	void ______(T _____)
@@ -85,20 +133,5 @@ public:
 } _32_______;
 int main()
 {
-	D_4(__3______) _;
-	for (auto ___ : _)
-	{
-		____3____() << ___;
-	}
+	__9(D_4(__3______)(), [](auto _____)-> int {____3____() << _____; return _____ + 1; });
 }
-
-// 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
-// 调试程序: F5 或调试 >“开始调试”菜单
-
-// 入门使用技巧: 
-//   1. 使用解决方案资源管理器窗口添加/管理文件
-//   2. 使用团队资源管理器窗口连接到源代码管理
-//   3. 使用输出窗口查看生成输出和其他消息
-//   4. 使用错误列表窗口查看错误
-//   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
-//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
